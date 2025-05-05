@@ -88,7 +88,7 @@ h1{
   display: flex;
   gap: 50px;
 } */
-input{
+/* input{
   width: 400px;
   height: 40px;
   border-radius: 8px;
@@ -110,7 +110,6 @@ button:hover{
   font-size: 20px;
 }
 .main{
-  /* margin-top: 60px; */
   height: 400px;
   width: 600px;
   
@@ -140,4 +139,23 @@ button:hover{
 .decision{
   margin-top: 150px;
   color: rgba(8, 75, 169, 0.908);
+} */
+
+h1{
+  margin: 10px auto;
+}
+#bulb{
+  
+  height: 580px;
+  width: 600px;
+}
+#btn{
+  height: 40px;
+  width: 120px;
+  background-color: brown;
+  color: aliceblue;
+  font-size: large;
+  border-radius: 6px;
+  border: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

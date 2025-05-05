@@ -288,60 +288,74 @@
 // setInterval(timer, 1000);
 // timer();  
 
-let firstUi = document.querySelector(".firstUi");
-let firstInput = document.querySelector(".firstInput");
-let firstUiBtn = document.querySelector(".firstUiBtn");
-let firstUiError = document.querySelector(".firstUiError");
-let secondUi = document.querySelector(".secondUi");
-let secondUiHeading = document.querySelector(".secondUiHeading");
-let secondInput = document.querySelector(".secondInput");
-let secondUiBtn = document.querySelector(".secondUiBtn");
-let secondUiError = document.querySelector(".secondUiError");
-let thirdUi = document.querySelector(".thirdUi");
-let thirdInput = document.querySelector(".thirdInput");
-let thirdUiBtn = document.querySelector(".thirdUiBtn");
-let thirdUiHeading = document.querySelector(".thirdUiHeading");
-let thirdUiError = document.querySelector(".thirdUiError");
-let decision = document.querySelector(".decision")
+// let firstUi = document.querySelector(".firstUi");
+// let firstInput = document.querySelector(".firstInput");
+// let firstUiBtn = document.querySelector(".firstUiBtn");
+// let firstUiError = document.querySelector(".firstUiError");
+// let secondUi = document.querySelector(".secondUi");
+// let secondUiHeading = document.querySelector(".secondUiHeading");
+// let secondInput = document.querySelector(".secondInput");
+// let secondUiBtn = document.querySelector(".secondUiBtn");
+// let secondUiError = document.querySelector(".secondUiError");
+// let thirdUi = document.querySelector(".thirdUi");
+// let thirdInput = document.querySelector(".thirdInput");
+// let thirdUiBtn = document.querySelector(".thirdUiBtn");
+// let thirdUiHeading = document.querySelector(".thirdUiHeading");
+// let thirdUiError = document.querySelector(".thirdUiError");
+// let decision = document.querySelector(".decision")
 
 
 
 
-firstUiBtn.addEventListener("click",()=>{
-    let value = Number(firstInput.value)
-    if (value) {
-        firstUiError.innerHTML = "Please enter a Name"
-    } else if (firstInput.value == "") {
-        firstUiError.innerHTML = "Please enter valid information"
-    }else{
-        firstUi.style.display = "none";
-        secondUi.style.display = "block";
-        secondUiHeading.innerHTML = firstInput.value + " Hello P1! " + " welcome"
+// firstUiBtn.addEventListener("click",()=>{
+//     let value = Number(firstInput.value)
+//     if (value) {
+//         firstUiError.innerHTML = "Please enter a Name"
+//     } else if (firstInput.value == "") {
+//         firstUiError.innerHTML = "Please enter valid information"
+//     }else{
+//         firstUi.style.display = "none";
+//         secondUi.style.display = "block";
+//         secondUiHeading.innerHTML = firstInput.value + " Hello P1! " + " welcome"
         
-    }
-})
-secondUiBtn.addEventListener("click",()=>{
-    let value = Number(secondInput.value)
-    if (!value) {
-        secondUiError.innerHTML = "Please enter a Number"
-    }else if(value < 1 || value > 100){
-        secondUiError.innerHTML = "Please enter number between 1-100"
-    }else if (secondInput.value == "") {
-        secondUiError.innerHTML = "Please enter valid information"
-    }else{
-        secondUi.style.display = "none";
-        thirdUi.style.display = "block";
-       thirdUiHeading.innerHTML = "player two " + "guess the player one's number"
-    }
-})
+//     }
+// })
+// secondUiBtn.addEventListener("click",()=>{
+//     let value = Number(secondInput.value)
+//     if (!value) {
+//         secondUiError.innerHTML = "Please enter a Number"
+//     }else if(value < 1 || value > 100){
+//         secondUiError.innerHTML = "Please enter number between 1-100"
+//     }else if (secondInput.value == "") {
+//         secondUiError.innerHTML = "Please enter valid information"
+//     }else{
+//         secondUi.style.display = "none";
+//         thirdUi.style.display = "block";
+//        thirdUiHeading.innerHTML = "player two " + "guess the player one's number"
+//     }
+// })
 
-thirdUiBtn.addEventListener("click",()=>{
-    if (secondInput.value == thirdInput.value) {
-        thirdUi.style.display = "none";
-        decision.innerHTML = "Congratulations You win"
-        decision.style.color = "red"
+// thirdUiBtn.addEventListener("click",()=>{
+//     if (secondInput.value == thirdInput.value) {
+//         thirdUi.style.display = "none";
+//         decision.innerHTML = "Congratulations You win"
+//         decision.style.color = "red"
+//     } else{
+//         thirdUi.style.display = "none";
+//         decision.innerHTML = "Opps You Loss"
+//     }
+// })
+
+
+let state = false
+
+function HandleClick() {
+    if (state == true) {
+        document.getElementById("bulb").src="images/light bulb off.png";
+        state = false;
     } else{
-        thirdUi.style.display = "none";
-        decision.innerHTML = "Opps You Loss"
+        document.getElementById("bulb").src="images/light bulb on.png";
+        state = true;
     }
-})
+}
+document.getElementById("btn").addEventListener("click", HandleClick)
