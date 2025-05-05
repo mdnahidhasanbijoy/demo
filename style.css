@@ -1,0 +1,143 @@
+/* body{
+    text-align: center;
+}
+#change{
+    width: 500px;
+    height: 400px;
+    margin: 30px auto;
+    background: red;
+} */
+/* .btn {
+    background-color: green;
+    color: white;
+    margin-top: 200px;
+    margin-left: 200px;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+}
+#demo{
+    margin-left: 170px;
+} */
+ /* .demo{
+    height: 200px;
+    width: 300px;
+    background-color: brown;
+ }
+ .two{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(57, 212, 14);
+ } */
+
+/* 
+ .point{
+    margin: 100px 200px;
+    background-repeat: no-repeat; 
+   
+ }
+  */
+  /* #one{
+    margin-left: 100px;
+    margin-top: 200px;
+  } */
+
+ /* .box{
+   display: flex;
+   width: 500px;
+   height: 100px;
+   gap:100px;
+   background-color: aqua;
+   margin-left: 450px;
+   margin-top: 200px;
+   padding: 10px;
+   text-align: center;
+ }  */
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+.hero{
+  height: 100vh;
+  background-image: url("images/nightcity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+h1{
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.time{
+  text-align: center;
+}
+.time h2{
+  font-size: 5rem;
+  font-weight: 300;
+}
+.timebox{
+  display: flex;
+  gap: 50px;
+} */
+input{
+  width: 400px;
+  height: 40px;
+  border-radius: 8px;
+  border: transparent;
+  padding: 0 10px;
+}
+button{
+  padding: 18px 45px;
+  background: rgb(239, 154, 50);
+  border: transparent;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+button:hover{
+  background: blue;
+  transition: .3s;
+  font-size: 20px;
+}
+.main{
+  /* margin-top: 60px; */
+  height: 400px;
+  width: 600px;
+  
+  border: 4px solid black;
+  background-color: rgb(151, 244, 133);
+  margin: 50px auto;
+  text-align: center;
+}
+
+.firstUi{
+  margin-top: 80px;
+}
+.secondUi{
+  display: none;
+  margin-top: 80px;
+}
+.firstUiError{
+  color: red;
+}
+.thirdUi{
+  display: none;
+  margin-top: 80px;
+}
+.secondUiError{
+  color: red;
+}
+.decision{
+  margin-top: 150px;
+  color: rgba(8, 75, 169, 0.908);
+}
