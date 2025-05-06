@@ -159,3 +159,13 @@ h1{
   border: transparent;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+#btn-2{
+  height: 40px;
+  width: 120px;
+  background-color: brown;
+  color: aliceblue;
+  font-size: large;
+  border-radius: 6px;
+  border: transparent;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

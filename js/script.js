@@ -347,15 +347,41 @@
 // })
 
 
-let state = false
+// let state = false
 
+// function HandleClick() {
+//     if (state == true) {
+//         document.getElementById("bulb").src="images/light bulb off.png";
+//         state = false;
+//     } else{
+//         document.getElementById("bulb").src="images/light bulb on.png";
+//         state = true;
+//     }
+// }
+// document.getElementById("btn").addEventListener("click", HandleClick)
+
+let image = document.getElementById("bulb")
 function HandleClick() {
-    if (state == true) {
-        document.getElementById("bulb").src="images/light bulb off.png";
-        state = false;
+   
+    if (image.src.match("light bulb on")) {
+        image.src = "images/light bulb off.png"
+       
     } else{
-        document.getElementById("bulb").src="images/light bulb on.png";
-        state = true;
+         image.src = "images/light bulb on.png"
     }
 }
 document.getElementById("btn").addEventListener("click", HandleClick)
+
+function HandleOff() {
+   
+    if (image.src.match("light bulb off")) {
+       
+         image.src = "images/light bulb on.png"
+         console.log(image);
+         
+    } else{
+         image.src = "images/light bulb off.png"
+    }
+}
+document.getElementById("btn-2").addEventListener("click", HandleOff)
+
