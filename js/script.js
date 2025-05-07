@@ -313,10 +313,10 @@ firstUiBtn.addEventListener("click",()=>{
     let value = Number(firstInput.value)
     if (value) {
         firstUiError.innerHTML = "Please enter a Name"
-        ErrorHandle(firstUiError)
+        Error(firstUiError)
     } else if (firstInput.value == "") {
         firstUiError.innerHTML = "Please enter valid information"
-        ErrorHandle(firstUiError)
+        Error(firstUiError)
     }else{
         firstUi.style.display = "none";
         secondUi.style.display = "block";
@@ -328,13 +328,13 @@ secondUiBtn.addEventListener("click",()=>{
     let value = Number(secondInput.value)
     if (!value) {
         secondUiError.innerHTML = "Please enter a Number"
-        ErrorHandle(secondUiError)
+        Error(secondUiError)
     }else if(value < 1 || value > 100){
         secondUiError.innerHTML = "Please enter number between 1-100"
-        ErrorHandle(secondUiError)
+        Error(secondUiError)
     }else if (secondInput.value == "") {
         secondUiError.innerHTML = "Please enter valid information"
-        ErrorHandle(secondUiError)
+        Error(secondUiError)
     }else{
         secondUi.style.display = "none";
         thirdUi.style.display = "block";
@@ -343,39 +343,64 @@ secondUiBtn.addEventListener("click",()=>{
 
 })
 
-//**this is my try for guessing number
- 
-function ErrorHandle(element) {
+function Error(element) {
     setTimeout(()=>{
         element.innerHTML = "";
-    },2400)
-
+    },2050)
 }
 
-
-let count = 4
+let attempt = 4
+ 
 thirdUiBtn.addEventListener("click",()=>{
     if (secondInput.value == thirdInput.value) {
+        decision.innerHTML = "congratulations you win";
         thirdUi.style.display = "none";
-        decision.innerHTML = "Congratulations You win"
-        decision.style.color = "red"
-    } else{
-        // thirdUi.style.display = "none";
-        // decision.innerHTML = "Opps You Loss"
-        count --
-        thirdUiError.innerHTML = "your chance(s) left " + count
-        ErrorHandle(thirdUiError)
-        if (count == 0) {
-            thirdUiError.innerHTML = "";
-            decision.innerHTML = "you are loss";
-            thirdUi.style.display = "none";
-           
-
+    }else{
+        attempt --
+        thirdUiError.innerHTML = "Incorrect:your chances left " + attempt
+        Error(thirdUiError)
+        if (attempt == 0) {
+            decision.innerHTML ="Sorry You failed. The ans is " + secondInput.value;
+            thirdUi.innerHTML ="";
+            decision.style.color = "red"
+            
         }
     }
 })
-
  
+
+//**this is my try for guessing number
+ 
+// function ErrorHandle(element) {
+//     setTimeout(()=>{
+//         element.innerHTML = "";
+//     },2400)
+
+// }
+
+
+// let count = 4
+// thirdUiBtn.addEventListener("click",()=>{
+//     if (secondInput.value == thirdInput.value) {
+//         thirdUi.style.display = "none";
+//         decision.innerHTML = "Congratulations You win"
+//         decision.style.color = "red"
+//     } else{
+//         // thirdUi.style.display = "none";
+//         // decision.innerHTML = "Opps You Loss"
+//         count --
+//         thirdUiError.innerHTML = "your chance(s) left " + count
+//         ErrorHandle(thirdUiError)
+//         if (count == 0) {
+//             thirdUiError.innerHTML = "";
+//             decision.innerHTML = "you are loss";
+//             thirdUi.style.display = "none";
+           
+
+//         }
+//     }
+// })
+
 // let attemptsLeft = 4;  // start with 4 attempts
 
 // thirdUiBtn.addEventListener("click", () => {
@@ -384,16 +409,16 @@ thirdUiBtn.addEventListener("click",()=>{
 
 //     if (guess === secretNumber) {
 //         thirdUi.style.display = "none";
-//         decision.innerHTML = "❤️ Congratulations! You win!";
+//         decision.innerHTML = " Congratulations! You win!";
 //         decision.style.color = "green";
 //     } else {
 //         attemptsLeft--;
 //         if (attemptsLeft > 0) {
-//             thirdUiError.innerHTML = ` ❌Wrong guess! You have ${attemptsLeft} attempt(s) left.`;
+//             thirdUiError.innerHTML = ` Wrong guess! You have ${attemptsLeft} attempt(s) left.`;
 //             thirdInput.value = "";  // clear input for next try
 //         } else {
 //             thirdUi.style.display = "none";
-//             decision.innerHTML = ` ❌Oops, you lose! The correct number was ${secretNumber}.`;
+//             decision.innerHTML = ` Oops, you lose! The correct number was ${secretNumber}.`;
 //             decision.style.color = "red";
 //         }
 //     }
