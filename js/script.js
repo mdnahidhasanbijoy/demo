@@ -369,7 +369,7 @@ thirdUiBtn.addEventListener("click",()=>{
 })
  
 
-//**this is my try for guessing number
+//**this is my try for guessing number(another)
  
 // function ErrorHandle(element) {
 //     setTimeout(()=>{
@@ -401,7 +401,7 @@ thirdUiBtn.addEventListener("click",()=>{
 //     }
 // })
 
-// let attemptsLeft = 4;  // start with 4 attempts
+// let attemptsLeft = 4;  //(with chatGpt)
 
 // thirdUiBtn.addEventListener("click", () => {
 //     let secretNumber = Number(secondInput.value);
@@ -466,3 +466,32 @@ thirdUiBtn.addEventListener("click",()=>{
 // }
 // document.getElementById("btn-2").addEventListener("click", HandleOff)
 
+//bulb close**
+
+
+  // let slideIndex = 0;
+  // showSlide(slideIndex);
+
+  // const prev = document.querySelector(".prev");
+  // const next = document.querySelector(".next");
+
+  // prev.addEventListener("click", function() {
+  //   showSlide(slideIndex -= 1);
+  // });
+
+  // next.addEventListener("click", function() {
+  //   showSlide(slideIndex += 1);
+  // });
+
+  // function showSlide(n) {
+  //   const slides = document.querySelectorAll(".slides");
+  //   if (n >= slides.length) { slideIndex = 0; }
+  //   if (n < 0) { slideIndex = slides.length - 1; }
+  //   slides.forEach(slide => slide.style.display = "none");
+  //   slides[slideIndex].style.display = "block";
+  // }
+
+  // Optional: Auto-slide every 3 seconds
+//   setInterval(function() {
+//     showSlide(slideIndex += 1);
+//   }, 3000);
